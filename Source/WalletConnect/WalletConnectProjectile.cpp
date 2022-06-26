@@ -8,7 +8,7 @@ AWalletConnectProjectile::AWalletConnectProjectile()
 {
 	// Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
-	CollisionComp->InitSphereRadius(100.0f);
+	CollisionComp->InitSphereRadius(0.001f);
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
 	CollisionComp->OnComponentHit.AddDynamic(this, &AWalletConnectProjectile::OnHit);		// set up a notification for when this component hits something blocking
 
@@ -22,10 +22,10 @@ AWalletConnectProjectile::AWalletConnectProjectile()
 	// Use a ProjectileMovementComponent to govern this projectile's movement
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileComp"));
 	ProjectileMovement->UpdatedComponent = CollisionComp;
-	ProjectileMovement->InitialSpeed = 100000.f;
-	ProjectileMovement->MaxSpeed = 100000.f;
+	ProjectileMovement->InitialSpeed = 10000000.f;
+	ProjectileMovement->MaxSpeed = 10000000.f;
 	ProjectileMovement->bRotationFollowsVelocity = true;
-	ProjectileMovement->bShouldBounce = true;
+	ProjectileMovement->bShouldBounce = false;
 
 	// Die after 3 seconds by default
 	InitialLifeSpan = 3.0f;
@@ -38,7 +38,7 @@ void AWalletConnectProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* Other
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
 		
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 400.0f, GetActorLocation());
+		OtherComp->AddImpulseAtLocation(GetVelocity() * 900.0f, GetActorLocation());
 		// OtherComp->DestroyComponent();
 		
 	}

@@ -3,10 +3,12 @@
 
 #include "IError.h"
 
-IError::IError()
+IError::IError(FString res)
 {
+	Res = res;
 }
-
-IError::~IError()
+IError::IError(FString res, int32 code)
 {
+	Res = res;
+	Code = code;
 }

@@ -16,7 +16,6 @@ class WALLETCONNECT_API IConnectorOpts
 {
 public:
 	IConnectorOpts();
-	~IConnectorOpts();
 
 	ICryptoLib CryptoLib;					// cryptoLib: ICryptoLib;
 	IWalletConnectOptions ConnectorOpts;	// connectorOpts: IWalletConnectOptions;

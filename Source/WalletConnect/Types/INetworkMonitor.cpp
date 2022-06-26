@@ -7,6 +7,8 @@ INetworkMonitor::INetworkMonitor()
 {
 }
 
-INetworkMonitor::~INetworkMonitor()
+template<typename F>
+void INetworkMonitor::on(FString Event, F callback)
 {
+
 }

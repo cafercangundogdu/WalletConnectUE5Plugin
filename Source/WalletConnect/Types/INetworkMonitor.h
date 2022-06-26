@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "../Core/SocketTransport.h"
 
 /**
  * 
@@ -11,7 +12,9 @@ class WALLETCONNECT_API INetworkMonitor
 {
 public:
 	INetworkMonitor();
-	~INetworkMonitor();
 
-	void on();		// on: (event: NetworkEvent, callback: () => void) => void;
+	// NetworkEvent -> online || offline
+	// void on(FString Event, void (*callback)(SocketTransport));			
+	template<typename F>
+	void on(FString Event, F callback);												// on: (event: NetworkEvent, callback: () => void) => void;
 };

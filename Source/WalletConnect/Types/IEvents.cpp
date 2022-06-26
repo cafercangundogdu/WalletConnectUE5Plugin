@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "IJsonRpcRequest.h"
+#include "IEvents.h"
 
-IJsonRpcRequest::IJsonRpcRequest()
+IEvents::IEvents()
 {
 }

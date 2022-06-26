@@ -11,10 +11,9 @@ class WALLETCONNECT_API IJsonRpcRequest
 {
 public:
 	IJsonRpcRequest();
-	~IJsonRpcRequest();
-
-	int32 Id;				// id: number;
-	FString JsonRpc;		// jsonrpc: string;
-	FString Method;			// method: string;
-	FString Params[2];		// params: any[];		// TODO: use correct type!
+	
+	int32 Id;					// id: number;
+	FString JsonRpc;			// jsonrpc: string;
+	FString Method;				// method: string;
+	TArray<FString> Params;		// params: any[];		// TODO: use correct type!
 };

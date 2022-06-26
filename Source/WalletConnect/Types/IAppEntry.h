@@ -16,14 +16,14 @@ public:
 	IAppEntry();
 	~IAppEntry();
 
-    FString Id;             // id: string;
-    FString Name;           // name: string;
-    FString HomePage;       // homepage: string;
-    FString Chains[32];     // chains: string[];
-    FString ImageId;        // image_id: string;
+    FString Id;                 // id: string;
+    FString Name;               // name: string;
+    FString HomePage;           // homepage: string;
+    TArray<FString> Chains;     // chains: string[];
+    FString ImageId;            // image_id: string;
 
-    ImageUrl ImageUrl;      // 
-    IApp App;               //
-    IDevice Mobile;         // 
-    IDevice Desktop;        // 
+    ImageUrl ImageUrl;          // 
+    IApp App;                   //
+    IDevice Mobile;             // 
+    IDevice Desktop;            // 
 };

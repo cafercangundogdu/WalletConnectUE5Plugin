@@ -14,14 +14,13 @@ class WALLETCONNECT_API IWCRpcConnectionOptions
 {
 public:
 	IWCRpcConnectionOptions();
-	~IWCRpcConnectionOptions();
 	
-	IConnector Connector;						// connector?: IConnector;
+	IConnector* Connector;						// connector?: IConnector;
 	FString Bridge;								// bridge?: string;
 	bool Qrcode;								// qrcode?: boolean;
 	int32 ChainId;								// chainId?: number;
 	FString StorageId;							// storageId?: string;
-	FString SigningMethods[255];				// signingMethods?: string[];
+	TArray<FString> SigningMethods;				// signingMethods?: string[];
 	IQRCodeModalOptions QrcodeModalOptions;		// qrcodeModalOptions?: IQRCodeModalOptions;
 	IClientMeta ClientMeta;						// clientMeta?: IClientMeta;
 };

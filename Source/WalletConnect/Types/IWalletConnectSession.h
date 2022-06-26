@@ -14,7 +14,7 @@ public:
 	~IWalletConnectSession();
 
 	bool Connected;					// connected: boolean;
-	FString Accounts[255];			// accounts: string[];
+	TArray<FString> Accounts;		// accounts: string[];
 	int32 ChainId;					// chainId: number;
 	FString Bridge;					// bridge: string;
 	FString Key;					// key: string;

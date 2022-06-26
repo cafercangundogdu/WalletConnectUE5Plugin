@@ -13,7 +13,7 @@ public:
 	IJsonRpcResponseSuccess();
 	~IJsonRpcResponseSuccess();
 
-	int32 Number;			// id: number;
+	int32 Id;				// id: number;
 	FString JsonRpc;		// jsonrpc: string;
 	FString Result;			// result: any;
 };

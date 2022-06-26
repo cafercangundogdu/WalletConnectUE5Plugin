@@ -14,7 +14,7 @@ public:
 	IJsonRpcResponseError();
 	~IJsonRpcResponseError();
 
-	int32 Number;					// id: number;
+	int32 Id;					// id: number;
 	FString JsonRpc;				// jsonrpc: string;
 	IJsonRpcErrorMessage Error;		// error: IJsonRpcErrorMessage;
 };

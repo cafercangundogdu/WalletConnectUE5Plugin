@@ -3,5 +3,9 @@
 
 #include "IClientMeta.h"
 
-IClientMeta::IClientMeta(){}
-IClientMeta::~IClientMeta(){}
+IClientMeta::IClientMeta()
+{
+	Description = "UE5 WalletConnect C++ SDK";
+	Name = "UE5 WalletConnect C++ SDK";
+	Url = "http://localhost:7777";
+}

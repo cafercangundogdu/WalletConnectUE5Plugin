@@ -7,12 +7,10 @@
 /**
  * 
  */
-class WALLETCONNECT_API IError
+class WALLETCONNECT_API Helper
 {
 public:
-	IError(FString res);
-	IError(FString res, int32 code);
+	Helper();
 
-	FString Res;	// res?: any;
-	int32 Code;		// code?: any;
+	void GetWebSocketUrl(FString Url, FString Protocol, int32 Version);
 };

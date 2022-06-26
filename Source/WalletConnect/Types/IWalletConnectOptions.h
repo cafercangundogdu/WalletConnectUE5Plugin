@@ -21,10 +21,10 @@ public:
 	FString Bridge;									// bridge?: string;
 	FString Uri;									// uri?: string;
 	FString StorageId;								// storageId?: string;
-	FString SigningMethods[255];					// signingMethods?: string[];
+	TArray<FString> SigningMethods;					// signingMethods?: string[];
 	IWalletConnectSession Session;					// session?: IWalletConnectSession;
 	ISessionStorage Storage;						// storage?: ISessionStorage;
-	IClientMeta ClientMeeta;						// clientMeta?: IClientMeta;
+	IClientMeta ClientMeta;							// clientMeta?: IClientMeta;
 	IQRCodeModal QrcodeModal;						// qrcodeModal?: IQRCodeModal;
 	IQRCodeModalOptions QrcodeModalOptions;			// qrcodeModalOptions?: IQRCodeModalOptions;
 };

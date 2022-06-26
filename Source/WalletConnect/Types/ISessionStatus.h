@@ -14,7 +14,7 @@ public:
 	~ISessionStatus();
 
 	int32 ChainId;				// chainId: number;
-	FString Accounts[255];		// accounts: string[];
+	TArray<FString> Accounts;	// accounts: string[];
 	int32 NetwotkId;			// networkId?: number;
 	FString RpcUrl;				// rpcUrl?: string;
 };

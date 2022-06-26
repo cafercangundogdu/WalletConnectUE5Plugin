@@ -5,8 +5,6 @@
 
 IWCRpcConnectionOptions::IWCRpcConnectionOptions()
 {
-}
-
-IWCRpcConnectionOptions::~IWCRpcConnectionOptions()
-{
+	IConnectorOpts opts = IConnectorOpts();
+	Connector = new IConnector(opts);
 }

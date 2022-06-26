@@ -5,8 +5,6 @@
 
 IConnectorOpts::IConnectorOpts()
 {
+
 }
 
-IConnectorOpts::~IConnectorOpts()
-{
-}

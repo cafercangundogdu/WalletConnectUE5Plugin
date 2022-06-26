@@ -13,7 +13,7 @@ public:
 	IQRCodeModalOptions();
 	~IQRCodeModalOptions();
 
-	FString RegistryUrl;			// registryUrl?: string;
-	FString MobileLinks[2];			// mobileLinks?: string[];
-	FString DesktopLinks[2];		// desktopLinks?: string[];
+	FString RegistryUrl;				// registryUrl?: string;
+	TArray<FString> MobileLinks;		// mobileLinks?: string[];
+	TArray<FString> DesktopLinks;		// desktopLinks?: string[];
 };
